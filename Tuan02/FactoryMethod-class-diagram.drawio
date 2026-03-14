@@ -1,0 +1,71 @@
+<mxfile host="app.diagrams.net" modified="2026-03-14T00:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="factory-method-class-diagram" name="FactoryMethod">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="animal" value="&lt;b&gt;&amp;laquo;interface&amp;raquo; Animal&lt;/b&gt;&lt;hr/&gt;+ displayBehavior(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="430" y="60" width="280" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dog" value="&lt;b&gt;Dog&lt;/b&gt;&lt;hr/&gt;+ Dog()&lt;br/&gt;+ displayBehavior(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="170" y="220" width="250" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tiger" value="&lt;b&gt;Tiger&lt;/b&gt;&lt;hr/&gt;+ Tiger()&lt;br/&gt;+ displayBehavior(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="220" width="250" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="animalFactory" value="&lt;b&gt;&amp;laquo;abstract&amp;raquo; AnimalFactory&lt;/b&gt;&lt;hr/&gt;# createAnimal(): Animal" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="430" y="220" width="280" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dogFactory" value="&lt;b&gt;DogFactory&lt;/b&gt;&lt;hr/&gt;+ createAnimal(): Animal" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="170" y="390" width="250" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tigerFactory" value="&lt;b&gt;TigerFactory&lt;/b&gt;&lt;hr/&gt;+ createAnimal(): Animal" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="390" width="250" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="factoryMethod" value="&lt;b&gt;FactoryMethod&lt;/b&gt;&lt;hr/&gt;+ main(args: String[]): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="430" y="560" width="280" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" value="implements" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="dog" target="animal">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" value="implements" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="tiger" target="animal">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" value="extends" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="dogFactory" target="animalFactory">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e4" value="extends" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="tigerFactory" target="animalFactory">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e5" value="creates" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="dogFactory" target="dog">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e6" value="creates" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="tigerFactory" target="tiger">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e7" value="uses" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="factoryMethod" target="animalFactory">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e8" value="uses" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="factoryMethod" target="animal">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
