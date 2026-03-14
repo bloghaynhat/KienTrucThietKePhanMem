@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net" modified="2026-03-14T00:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="abstract-factory-class-diagram" name="AbstractFactory">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="animalFactory" value="&lt;b&gt;&amp;laquo;abstract&amp;raquo; AnimalFactory&lt;/b&gt;&lt;hr/&gt;# createTiger(color: String): Tiger&lt;br/&gt;# createDog(color: String): Dog" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="420" y="60" width="320" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tigerInterface" value="&lt;b&gt;&amp;laquo;interface&amp;raquo; Tiger&lt;/b&gt;&lt;hr/&gt;+ aboutMe(): void&lt;br/&gt;+ inviteDog(dog: Dog): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="180" y="220" width="290" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dogInterface" value="&lt;b&gt;&amp;laquo;interface&amp;raquo; Dog&lt;/b&gt;&lt;hr/&gt;+ displayMe(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="690" y="220" width="250" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="wildAnimalFactory" value="&lt;b&gt;WildAnimalFactory&lt;/b&gt;&lt;hr/&gt;+ WildAnimalFactory()&lt;br/&gt;+ createTiger(color: String): Tiger&lt;br/&gt;+ createDog(color: String): Dog" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="120" y="390" width="310" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="petAnimalFactory" value="&lt;b&gt;PetAnimalFactory&lt;/b&gt;&lt;hr/&gt;+ PetAnimalFactory()&lt;br/&gt;+ createTiger(color: String): Tiger&lt;br/&gt;+ createDog(color: String): Dog" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="730" y="390" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="wildTiger" value="&lt;b&gt;WildTiger&lt;/b&gt;&lt;hr/&gt;+ WildTiger(color: String)&lt;br/&gt;+ aboutMe(): void&lt;br/&gt;+ inviteDog(dog: Dog): void&lt;br/&gt;+ toString(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="590" width="250" height="130" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="wildDog" value="&lt;b&gt;WildDog&lt;/b&gt;&lt;hr/&gt;+ WildDog(color: String)&lt;br/&gt;+ displayMe(): void&lt;br/&gt;+ toString(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="330" y="590" width="250" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="petTiger" value="&lt;b&gt;PetTiger&lt;/b&gt;&lt;hr/&gt;+ PetTiger(color: String)&lt;br/&gt;+ aboutMe(): void&lt;br/&gt;+ inviteDog(dog: Dog): void&lt;br/&gt;+ toString(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="620" y="590" width="250" height="130" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="petDog" value="&lt;b&gt;PetDog&lt;/b&gt;&lt;hr/&gt;+ PetDog(color: String)&lt;br/&gt;+ displayMe(): void&lt;br/&gt;+ toString(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="910" y="590" width="250" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="abstractFactoryClient" value="&lt;b&gt;AbstractFactory&lt;/b&gt;&lt;hr/&gt;+ main(args: String[]): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="455" y="760" width="260" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" value="extends" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="wildAnimalFactory" target="animalFactory">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" value="extends" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="petAnimalFactory" target="animalFactory">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" value="implements" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="wildTiger" target="tigerInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e4" value="implements" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="petTiger" target="tigerInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e5" value="implements" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="wildDog" target="dogInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e6" value="implements" style="endArrow=block;endFill=0;endSize=14;html=1;" edge="1" parent="1" source="petDog" target="dogInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e7" value="creates" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="wildAnimalFactory" target="wildTiger">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e8" value="creates" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="wildAnimalFactory" target="wildDog">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e9" value="creates" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="petAnimalFactory" target="petTiger">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e10" value="creates" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="petAnimalFactory" target="petDog">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e11" value="returns" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="animalFactory" target="tigerInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e12" value="returns" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="animalFactory" target="dogInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e13" value="depends on" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="tigerInterface" target="dogInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e14" value="uses" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="abstractFactoryClient" target="animalFactory">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e15" value="uses" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="abstractFactoryClient" target="tigerInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e16" value="uses" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="abstractFactoryClient" target="dogInterface">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
