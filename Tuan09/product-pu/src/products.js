@@ -1,0 +1,36 @@
+export const PRODUCTS = [{
+        id: 'p01',
+        name: 'Mechanical Keyboard',
+        price: 1299000,
+        stock: 20,
+        description: 'Hot-swappable keyboard for flash sale gamers.',
+    },
+    {
+        id: 'p02',
+        name: 'Wireless Mouse',
+        price: 399000,
+        stock: 50,
+        description: 'Lightweight mouse with high-precision sensor.',
+    },
+    {
+        id: 'p03',
+        name: 'Gaming Headset',
+        price: 799000,
+        stock: 25,
+        description: 'Clear audio and strong mic for team battles.',
+    },
+    {
+        id: 'p04',
+        name: 'USB-C Hub',
+        price: 590000,
+        stock: 30,
+        description: '7-in-1 hub for laptop users during flash sale.',
+    },
+    {
+        id: 'p05',
+        name: 'Monitor 24 inch',
+        price: 2590000,
+        stock: 12,
+        description: 'Fast refresh display for high-performance desk setups.',
+    },
+];
