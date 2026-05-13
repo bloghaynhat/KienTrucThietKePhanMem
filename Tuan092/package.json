@@ -1,0 +1,8 @@
+{
+  "name": "buoi8-travel-booking-system",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node -e \"console.log('Use individual service folders or docker-compose')\""
+  }
+}

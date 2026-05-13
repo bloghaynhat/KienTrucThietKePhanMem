@@ -33,4 +33,11 @@ export const PRODUCTS = [{
         stock: 12,
         description: 'Fast refresh display for high-performance desk setups.',
     },
+    {
+        id: 'p06',
+        name: 'HAHA',
+        price: 2590000,
+        stock: 12,
+        description: 'Fast refresh display for high-performance desk setups.',
+    },
 ];

@@ -19,11 +19,11 @@ async function fetchProduct(productId) {
     return data.product || null;
 }
 
-app.get('/health', async(_request, response) => {
+app.get('/health', async (_request, response) => {
     response.json({ status: 'ok', service: 'cart-pu' });
 });
 
-app.post('/cart/add', async(request, response) => {
+app.post('/cart/add', async (request, response) => {
     try {
         const { userId, productId, quantity = 1 } = request.body || {};
         if (!userId || !productId || Number(quantity) <= 0) {
@@ -46,7 +46,7 @@ app.post('/cart/add', async(request, response) => {
     }
 });
 
-app.get('/cart', async(request, response) => {
+app.get('/cart', async (request, response) => {
     try {
         const userId = request.query.userId;
         if (!userId) {
@@ -84,7 +84,7 @@ app.get('/cart', async(request, response) => {
     }
 });
 
-app.delete('/cart', async(request, response) => {
+app.delete('/cart', async (request, response) => {
     try {
         const userId = request.query.userId;
         if (!userId) {
